@@ -49,11 +49,11 @@ jobs:
   - bash: |
       source activate myEnvironment
       conda install --yes --quiet --name myEnvironment python=$PYTHON_VERSION numpy
-      pip install pytest pytest-azurepipelines
     displayName: Install Anaconda packages
 
   - bash: |
       source activate myEnvironment
+      pip install pytest pytest-azurepipelines
       pytest
     displayName: pytest
 
